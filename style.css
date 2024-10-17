@@ -438,7 +438,7 @@ nav ul li a:hover {
 }
 .wrapper {
   width: 100%;
-  height: 80vh; /* Sets the height to 80% of the viewport height */
+  height: 100vh; /* Sets the height to 80% of the viewport height */
   display: flex; /* Enables flexbox for centering children */
   align-items: center; /* Vertically centers items within the wrapper */
   justify-content: center; /* Horizontally centers items within the wrapper */
