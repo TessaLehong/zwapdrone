@@ -265,7 +265,7 @@ body, html {
 }
 
 #course-details {
-    background-image: url('./assets/course\ info\ back.jpg');
+    background-image: url('course\ info\ back.jpg');
     background-size: cover; /* Ensure the image covers the entire section */
     background-position: center; /* Center the image */
     color: #004d40; /* Dark green text */
