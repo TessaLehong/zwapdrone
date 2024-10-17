@@ -111,7 +111,7 @@ nav ul li a:hover {
 /* Hero Section */
 .hero {
   height: 100vh;
-  background-image: url('./assets/pexels-alxs-3988251 - Copy.jpg'); /* Background image */
+  background-image: url('pexels-alxs-3988251 - Copy.jpg'); /* Background image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -547,16 +547,16 @@ input:checked + label ~ #slides .slide .hover-text {
 }
 
 .card[for="c1"] {
-    background-image: url(./assets/karl-greif-H5IXIH254AU-unsplash.jpg);
+    background-image: url(karl-greif-H5IXIH254AU-unsplash.jpg);
 }
 .card[for="c2"] {
-    background-image: url(./assets/pexels-daniel-eliashevsky-30667400-10229033.jpg);
+    background-image: url(pexels-daniel-eliashevsky-30667400-10229033.jpg);
 }
 .card[for="c3"] {
-    background-image: url(./assets/afro-american-male-female-colleagues-suits-talking-office.jpg);
+    background-image: url(afro-american-male-female-colleagues-suits-talking-office.jpg);
 }
 .card[for="c4"] {
-    background-image: url(./assets/Screenshot\ 2024-10-03\ 011831.png);
+    background-image: url(Screenshot\ 2024-10-03\ 011831.png);
 }
 .slider {
   height: 300px; /* Adjust this based on your preference */
@@ -716,7 +716,7 @@ input:checked + label ~ #slides .slide .hover-text {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('./assets/aaron-burden-0fA3gVTGwjQ-unsplash.jpg'); /* Path to your image */
+  background-image: url('aaron-burden-0fA3gVTGwjQ-unsplash.jpg'); /* Path to your image */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
