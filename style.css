@@ -660,12 +660,13 @@ input:checked + label ~ #slides .slide .hover-text {
 @media screen and (max-width: 768px) {
   #slides {
     padding: 5px;
+    width: 100%
     
   }
 
   #slides .inner {
     display: flex;
-    flex-direction: column; /* Align slides vertically on smaller screens */
+    flex-direction: row; /* Align slides vertically on smaller screens */
     width: 60%; /* Ensure each slide takes full width */
   }
 
