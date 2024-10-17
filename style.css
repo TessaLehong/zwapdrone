@@ -660,27 +660,28 @@ input:checked + label ~ #slides .slide .hover-text {
 @media screen and (max-width: 768px) {
   #slides {
     padding: 5px;
+    
   }
 
   #slides .inner {
     display: flex;
     flex-direction: column; /* Align slides vertically on smaller screens */
-    width: 80%; /* Ensure each slide takes full width */
+    width: 60%; /* Ensure each slide takes full width */
   }
 
   #slides .slide {
-    width: 80%; /* Each slide takes 100% width */
+    width: 60%; /* Each slide takes 100% width */
     height: auto; /* Auto height for flexible sizing */
   }
 
   .slide-content {
     padding: 10px;
-    font-size: 10px; /* Reduce font size for smaller screens */
+    font-size: 8px; /* Reduce font size for smaller screens */
   }
 
   #controls {
-    margin-top: 10px; /* Adjust margin for control buttons */
-    height: 40px; /* Reduce the height of control buttons */
+    margin-top: 8px; /* Adjust margin for control buttons */
+    height: 30px; /* Reduce the height of control buttons */
   }
 
   #controls label {
