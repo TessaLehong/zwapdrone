@@ -105,7 +105,7 @@ body, html {
     position: relative;
     padding-top: 20px; /* Adjust this to ensure enough space for the heading */
     text-align: center; /* Center the heading text */
-    height: 70vh;
+    height: 100vh;
 }
 
 #course-overview h3 {
@@ -202,7 +202,6 @@ body, html {
     display: flex;
     flex-direction: row; /* Ensure horizontal layout */
     align-items: center;
-    flex-wrap: wrap; /* Allows wrapping if there are too many items */
     justify-content: space-between; /* Space items evenly */
     gap: 20px; /* Add spacing between the feature boxes */
 }
