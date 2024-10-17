@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwap Drones</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Calendly Widget CSS in the head -->
+     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+     <!-- Calendly Widget JavaScript before closing body tag -->
+     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+
+
+</head>
+<body>
+    <nav>
+        <div class="hamburger">&#9776;</div> <!-- Hamburger icon -->
+        <div class="logo">
+            <img src="./assets/zwap drones old logo.jpg" alt=""> 
+        </div>
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="#aboutus">About us</a></li>
+          <li><a class="nav-link" href="#services">Services</a></li>
+          <li><a href="license.html">RPL Licence</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a class="nav-link" href="#contact">Contact Us</a></li>
+        </ul> 
+      </nav>
+  
+      <script>
+        // JavaScript to toggle the navigation on smaller screens
+        document.querySelector('.hamburger').addEventListener('click', function() {
+          document.querySelector('nav ul').classList.toggle('active');
+        });
+      </script>
+
+   
+      <section class="hero">
+       
+        <div class="hero-content">
+            <h1>Discover Breathtaking Aerial Photography</h1>
+            <p>Explore the world from a new perspective with Zwap Drones.</p>
+        </div>
+    
+        <!-- Drone Animation -->
+        <div class="drone-container">
+            <div class="drone"></div>
+            <img src="./assets/3cfb9c22-c08e-4091-9f7e-d1793cb12901.png" alt="Flying Drone" class="drone">
+        </div>
+    </section>
+    <script src="index.js"></script> 
+
+
+    <section id="about-us">
+        <div class="container">
+            <div class="content">
+                <div class="text-content">
+                    <h1>About us</h1>
+            
+              <p>Zwapdrones South Africa is dedicated to transforming logistics delivery and security in peri-urban areas through innovative drone technology. Our services range from drone rentals and pilots for hire to drone photography, consulting, and piloting lessons. We prioritize sustainability by significantly reducing carbon emissions with our electric, autonomous drones.
+
+                Our commitment to education and innovation extends to supporting STEAM programs, encouraging the involvement of women in the drone industry. With cutting-edge technology and a focus on environmental impact, we provide smart, scalable solutions for businesses and communities across South Africa.
+                
+                </p>
+          </div>
+          <div class="image-content">
+              <img src="/assets/Screenshot 2024-09-26 140739.png" alt="Drone view" />
+          </div>
+      </div>
+  </div>
+</section>
+
+
+   
+<section id="services"> 
+    <div class="wrapper">
+        <h1 class="services-heading">Services</h1> 
+        <div class="container">
+            <!-- Service Card 1 -->
+            <input type="radio" name="slide" id="c1">
+            <label for="c1" class="card">
+                <div class="row">
+                    <div class="icon"></div>
+                    <div class="description">
+                        <h4>Rent a Drone</h4>
+                        <p>You can rent drones from us, fully insured and compliant with all regulations.</p>
+                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Rental</button>
+                    </div>
+                </div>
+                <div class="hover-text">Rent a drone</div> <!-- Hover text for slide 1 -->
+            </label>
+
+            <!-- Service Card 2 -->
+            <input type="radio" name="slide" id="c2">
+            <label for="c2" class="card">
+                <div class="row">
+                    <div class="icon"></div>
+                    <div class="description">
+                        <h4>Photography</h4>
+                        <p>This process includes briefing the client, visiting the location, capturing photos, enhancing them for the best quality, and delivering both digital and hard copies to the client.</p>
+                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Photography</button>
+                    </div>
+                </div>
+                <div class="hover-text">Drone Photography</div> <!-- Hover text for slide 2 -->
+            </label>
+
+            <!-- Service Card 3 -->
+            <input type="radio" name="slide" id="c3">
+            <label for="c3" class="card">
+                <div class="row">
+                    <div class="icon"></div>
+                    <div class="description">
+                        <h4>Consulting</h4>
+                        <p>We advise you on the right drone and software to achieve your desired outcome. Our consultants have expert knowledge of the industry and stay updated on the latest advancements in drone technology.</p>
+                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Consulting</button>
+                    </div>
+                </div>
+                <div class="hover-text">Drone Consulting</div> <!-- Hover text for slide 3 -->
+            </label>
+
+            <!-- Service Card 4 -->
+            <input type="radio" name="slide" id="c4">
+            <label for="c4" class="card">
+                <div class="row">
+                    <div class="icon"></div>
+                    <div class="description">
+                        <h4>Pilot License</h4>
+                        <p>We offer beginner drone flying lessons and assist with navigating local legislation and licensing requirements.</p>
+                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule License Session</button>
+                    </div>
+                </div>
+                <div class="hover-text">Pilot License</div> <!-- Hover text for slide 4 -->
+            </label>
+        </div>
+    </div>
+</section>
+
+
+    
+
+    
+<section class="contact-section" id="contact">
+    <div class="background-image">
+        <div class="overlay">
+            <h1 class="heading">Beyond<br>Ground Level</h1>
+            <p class="description">Take your project to new heights with my professional aerial photography services.</p>
+            
+            <!-- Updated form structure -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                <input type="hidden" name="access_key" value="22c991ca-fc43-4b5e-8a19-d2504262c6a1">
+                <div class="contact-info">
+                    <p>Email: info@zwapdrones.com</a></p>
+                    <p>Phone:  087 150 4628</a></p>
+                </div>
+                <div class="contact-fields">
+                    <label for="email">Email:</label>
+                    <textarea id="email" name="email" placeholder="Your email address*" required class="input-field"></textarea>
+                </div>
+            
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Your message*" required class="message-field"></textarea>
+                </div>
+            
+                <button type="submit" class="submit-btn">Send</button>
+            </form>
+            
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+        <!-- Other sections of your website -->
+    </body>
+    </html>
+    
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Website. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>

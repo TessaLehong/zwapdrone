@@ -1,0 +1,350 @@
+/* Global Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+/* Header Styles */
+.header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header .brand {
+    color: #fff;
+    font-size: 2rem;
+}
+
+* Navbar Styles */
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: #d0f0c0; /* Light green on hover */
+}
+
+@media (max-width: 768px) {
+    /* Responsive Navbar */
+    .nav {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .nav ul {
+        gap: 10px; /* Reduce gap between items */
+    }
+}
+
+/* Fullpage Section Styles */
+.fullpage {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+#video-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.video-overlay {
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.video-overlay h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.video-overlay p {
+    margin: 20px 0;
+}
+
+#course-overview {
+    position: relative;
+    padding-top: 20px; /* Adjust this to ensure enough space for the heading */
+    text-align: center; /* Center the heading text */
+    height: 70vh;
+}
+
+#course-overview h3 {
+    color: #00796b; /* Adjust color as needed */
+    font-size: 40px;
+    margin-bottom: 20px; /* Space between the heading and the content */
+    position: absolute;
+    top: 0; /* Align the heading at the top */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Ensure it's centered */
+    width: 100%; /* Ensure it takes full width */
+    padding-top: 20px; /* Add some space at the top */
+}
+
+#course-overview .overview-content {
+    max-width: 1200px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    padding-top: 100px; /* Adjust padding to accommodate the heading */
+}
+
+.overview-text {
+    float: left; /* Float text to the left */
+    width: 55%; /* Adjust width as needed */
+    padding-right: 20px; /* Add space between text and image */
+}
+
+.overview-image {
+    float: right; /* Float image to the right */
+    width: 40%; /* Adjust width as needed */
+}
+
+.overview-image img {
+    width: 77%; /* Make image take full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: add some rounding to the corners */
+}
+
+/* Clear floats after the content */
+#course-overview::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#course-overview p {
+    font-size: 18px; /* Smaller text */
+    line-height: 1.6; /* Increase line height for better readability */
+    text-align: justify; /* Justify text for better filling of space */
+}
+@media (max-width: 768px) {
+    #course-overview .overview-content {
+        padding-top: 50px; /* Adjust padding to fit better on smaller screens */
+        text-align: left; /* Align text left */
+    }
+    
+    #course-overview h3 {
+        font-size: 30px; /* Slightly reduce heading size */
+        padding-top: 0; /* Remove extra top padding */
+    }
+
+    .overview-text {
+        float: none; /* Remove float for stacking */
+        width: 100%; /* Full width on small screens */
+        padding-right: 0; /* Remove right padding */
+    }
+
+    .overview-image {
+        float: none; /* Remove float for stacking */
+        width: 100%; /* Full width on small screens */
+        margin-top: 20px; /* Add some space above the image */
+    }
+
+    .overview-image img {
+        width: 60%; /* Ensure image scales down fully on smaller screens */
+        max-width: 40%; /* Prevent overflow */
+    }
+
+    #course-overview p {
+        font-size: 10px; /* Adjust font size for readability */
+    }
+}
+
+
+
+
+/* Features Section Styles */
+.features {
+    background-color: #a3c9cf; /* Light grey background for features */
+    padding: 40px 20px;
+}
+
+.features .container {
+    display: flex;
+    flex-direction: row; /* Ensure horizontal layout */
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping if there are too many items */
+    justify-content: space-between; /* Space items evenly */
+    gap: 20px; /* Add spacing between the feature boxes */
+}
+
+.feature {
+    background: hsl(198, 81%, 77%); /* Light blue background for feature boxes */
+    border: 1px solid #e0e0e0; /* Light border */
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    flex: 1; /* Allows each feature box to grow and shrink */
+    min-width: 250px; /* Set a minimum width for the boxes */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .features .container {
+        flex-direction: column; /* Stack features vertically on smaller screens */
+        align-items: center;
+    }
+}
+
+
+.calendly-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.calendly-button:hover {
+    background-color: #0056b3;
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .calendly-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+#course-details {
+    background-image: url('./assets/course\ info\ back.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the image */
+    color: #004d40; /* Dark green text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#course-details h4 {
+    color: #ffffff; /* White text for the heading */
+    font-size: 50px;
+}
+
+#course-details ul {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default padding */
+}
+
+#course-details ul li {
+    margin-bottom: 10px; /* Space between list items */
+    line-height: 1.6; /* Line spacing */
+}
+
+
+#contact-info{
+    background-color: black; 
+    color: #004d40; /* Dark green text */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+h3, h4 {
+    margin-bottom: 20px;
+    color: #00796b; /* Teal color for section headings */
+    font-size: 2.5rem;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+#container p{
+    font-size: 2rem;
+}
+
+/* Button Styles */
+.btn {
+    background-color: #00796b; /* Dark teal button */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #004d40; /* Darker teal on hover */
+}
+@media (max-width: 480px) {
+    /* Extra small screens */
+    .header .brand {
+        font-size: 1.2rem;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features .container {
+        flex-direction: column; /* Stack features vertically on small screens */
+        align-items: center;
+    }
+    .fullpage {
+        padding: 20px;
+    }
+
+    .feature {
+        width: 80%; /* Feature boxes take full width on smaller screens */
+    }
+}
+    }

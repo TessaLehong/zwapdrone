@@ -1,0 +1,887 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  
+}
+
+/* Navbar Styles */
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  background-color: white;
+  z-index: 1000;
+  justify-content: space-between; /* Space between logo and hamburger menu */
+}
+
+/* Styles for the navigation list */
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each list item */
+nav ul li {
+  margin-left: 20px;
+}
+
+/* Links */
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 25px;
+  padding: 10px;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.3s ease;
+}
+
+/* Hover effect on links */
+nav ul li a:hover {
+  border-bottom: 2px solid black;
+}
+
+/* Hamburger menu button (hidden by default) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: black;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between; /* Align logo on the left and hamburger on the right */
+  }
+
+  /* Display the hamburger menu */
+  .hamburger {
+    display: block;
+  }
+
+  /* Hide the navigation links by default */
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    display: none; /* Hidden until the hamburger is clicked */
+  }
+
+  /* Each list item takes the full width of the screen */
+  nav ul li {
+    margin-left: 0;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  /* Show the navigation when active */
+  nav ul.active {
+    display: flex;
+  }
+}
+/* Logo Styling */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: black; /* Change to a color that contrasts with your background */
+}
+
+.logo img {
+  max-width: 70px; /* Adjust logo size */
+  height: auto;
+  margin-right: 10px; /* Space between logo image and text */
+}
+
+/* Full-Width Background Section */
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background-image: url('./assets/pexels-alxs-3988251 - Copy.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+/* Hero Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+}
+
+/* Container for the drone animation */
+.drone-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden; /* Hide overflow to keep it clean */
+  z-index: 2; /* Ensure the drone stays on top */
+}
+
+/* Drone Animation */
+.drone-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.drone {
+  position: absolute;
+  width: 250px;
+  top: 20%;
+  animation: flyDrone 4s ease-in-out infinite;
+}
+
+@keyframes flyDrone {
+  0% {
+    left: -200px;
+    top: 20%;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: calc(50vw - 125px);
+    top: 10%;
+    transform: rotate(10deg);
+  }
+  100% {
+    left: 100vw;
+    top: 20%;
+    transform: rotate(0deg);
+  }
+}
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+/* About Us Section */
+/* About Us Section */
+.about-us-section {
+  position: relative; /* Allows absolute positioning of inner elements */
+  height: 80vh; /* Full viewport height */
+  background-color: white;
+  background-size: cover; /* Ensure it covers the entire section */
+  background-position: center; /* Center the image */
+  display: flex; /* Use flexbox to align content */
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Align items at the start (top) vertically */
+  color: white; /* Text color */
+  padding: 20px; /* Padding for spacing */
+}
+
+/* Main container for content */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 2s ease-out 5s forwards; /* Slow fade-in and upwards animation */
+}
+
+/* Content Styles */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* Text content */
+.text-content {
+  flex: 1;
+  margin-right: 20px; /* Space between the text and image */
+}
+
+.text-content h1 {
+  font-size: 42px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.text-content p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Image content */
+.image-content {
+  flex: 1;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 2.5s ease-out 1.5s forwards;
+}
+
+.image-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in Upwards Animation */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Slide-in Animations */
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  animation: slideLeft 1.5s ease-in-out;
+}
+
+.slide-right {
+  animation: slideRight 1.5s ease-in-out;
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .text-content, .image-content {
+      flex: unset;
+      width: 100%; /* Ensure both text and image take full width */
+      padding: 10px;
+  }
+
+  .text-content h1 {
+      font-size: 26px; /* Reduce heading size */
+      text-align: center; /* Center the text */
+  }
+
+  .text-content p {
+      font-size: 11px; /* Reduce paragraph font size */
+      text-align: center; /* Center paragraph */
+  }
+
+  .image-content img {
+      max-width: 100%; /* Ensure image fits the screen */
+      margin-bottom: 15px; /* Add space between image and text */
+  }
+
+  .slide-left, .slide-right {
+      animation-duration: 1s;
+      font-size: 16px;
+  }
+}
+
+
+
+
+  #services {
+    text-align: center; /* Center text within the section */
+    margin-top: 20px; /* Add some margin on top for spacing */
+    padding: 20px; /* Padding for inner spacing */
+  }
+
+
+  
+  .services-heading {
+    position: absolute; /* Positioning it absolutely within the wrapper */
+    top: 20px; /* Adjust this to position it vertically */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Corrects the offset */
+    z-index: 10; /* Ensures it appears above other elements */
+    color: #333; /* Change to your preferred text color */
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+    padding: 10px 20px; /* Adds some spacing */
+    border-radius: 5px; /* Optional: rounded corners */
+    text-align: center; /* Centers the text */
+    font-size: 42px;
+    font-weight: bold;
+    
+}
+  
+
+
+  .calendly-button {
+    background-color: #0069ff; /* Button background color (Calendly blue) */
+    color: #ffffff; /* Button text color (white) */
+    padding: 10px 20px; /* Padding inside the button */
+    border: none; /* Remove default borders */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    font-family: 'Poppins', sans-serif; /* Font style */
+    font-weight: 600; /* Font weight */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    text-align: center;
+}
+#slides .slide {
+  position: relative;
+  width: 25%;
+  float: left;
+  display: block;
+  height: 100%;
+  color: #fff;
+  padding: 0 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+#slides .slide .hover-text {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+  z-index: 2;
+  font-size: 18px;
+  font-family: 'Arial', sans-serif;
+  pointer-events: none; /* Prevents the text from interfering with hover */
+}
+
+#slides .slide:hover .hover-text {
+  opacity: 1; /* Show the hover text */
+  transition: opacity 0.3s ease; /* Smooth fade-in effect */
+}
+
+/* Hover effect for the button */
+.calendly-button:hover {
+    background-color: #0056d4; /* Darker blue on hover */
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* Button alignment for service card */
+.calendly-button {
+    display: inline-block; /* Makes sure the button doesn't stretch too much */
+    margin-top: 10px; /* Adds space between the text and button */
+    text-decoration: none; /* Removes default underline for links */
+}
+.wrapper {
+  width: 100%;
+  height: 80vh; /* Sets the height to 80% of the viewport height */
+  display: flex; /* Enables flexbox for centering children */
+  align-items: center; /* Vertically centers items within the wrapper */
+  justify-content: center; /* Horizontally centers items within the wrapper */
+  background-color: white; /* Sets the background color to white */
+  position: relative; /* This allows for absolute positioning of children */
+}
+
+.container{
+    height: 400px;
+    display: flex;
+    flex-wrap:nowrap ;
+    justify-content: start ;
+    margin-top: 60px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+      flex-wrap: wrap; /* Allow wrapping */
+      justify-content: center; /* Center align items for smaller screens */
+  }
+  
+}
+
+.card {
+    width: 80px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column; 
+    justify-content: start; 
+    align-items: flex-start; 
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.8) ;
+    height: 500px;
+    padding: 20px;
+    position: relative;
+}
+
+.card > .row  {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+.card > .row > .description {
+  position: absolute;
+    top: 20px; /* Position at the top */
+    left: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateY(-30px); /* Start off-screen upwards */
+    transition: all .3s ease;
+    text-align: left;
+    color: #FFFFFF; /* Set a white font color */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7); 
+}
+
+.description p {
+  color: #fff; /* Change paragraph color to white for contrast */
+  font-size: 18px; /* Increase font size */
+  padding: 5px 0;
+  text-align: left; /* Align the text to the left */
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+
+    
+}
+
+.description h4 {
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 24px; /* Increase heading size */
+  font-weight: bold;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+input:checked + label .hover-text {
+  opacity: 0; /* Completely hide the hover text */
+  visibility: hidden; /* Make it non-interactive */
+  transition: opacity 0.5s ease; /* Smooth fade-out effect */
+}
+
+input:checked + label ~ #slides .slide .hover-text {
+  opacity: 0; /* Hide the hover text */
+  visibility: hidden; /* Make sure it's non-interactive */
+  transition: opacity 0.5s ease; /* Smooth fade-out effect */
+}
+
+.card[for="c1"] {
+    background-image: url(./assets/karl-greif-H5IXIH254AU-unsplash.jpg);
+}
+.card[for="c2"] {
+    background-image: url(./assets/pexels-daniel-eliashevsky-30667400-10229033.jpg);
+}
+.card[for="c3"] {
+    background-image: url(./assets/afro-american-male-female-colleagues-suits-talking-office.jpg);
+}
+.card[for="c4"] {
+    background-image: url(./assets/Screenshot\ 2024-10-03\ 011831.png);
+}
+.slider {
+  height: 300px; /* Adjust this based on your preference */
+  width: 350px; ;
+}
+
+
+
+/* Main Slider Styles */
+#slider {
+  margin: 0 auto;
+  width: 100%; /* Full width for responsiveness */
+  max-width: 100%;
+  text-align: center;
+}
+
+#slider input[type=radio] {
+  display: none;
+}
+
+#slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  position: relative;
+  z-index: 1;
+}
+
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+
+#slides .inner {
+  display: flex;
+  flex-direction: row; /* Row layout for larger screens */
+  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  width: 400%; /* 4 slides, each taking 100% of the width */
+  line-height: 0;
+  height: auto; /* Set to auto to allow dynamic height based on content */
+}
+
+/* Slide styles */
+#slides .slide {
+  width: 25%; /* 4 slides in 100%, so 25% width each */
+  float: left;
+  display: block;
+  height: auto; /* Auto height for dynamic content adjustment */
+  color: #fff;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.slide-content {
+  padding: 10px;
+}
+
+/* Slide background colors for demo purposes */
+#slides .slide_1 { background: #00171F; }
+#slides .slide_2 { background: #003459; }
+#slides .slide_3 { background: #007EA7; }
+#slides .slide_4 { background: #00A8E8; }
+
+/* Responsive Control styles */
+#controls {
+  margin: -130px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+
+#controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: .4;
+}
+
+#controls label:hover {
+  opacity: 1;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide1:checked ~ #controls label:nth-child(3),
+#slide1:checked ~ #controls label:nth-child(4),
+#slide1:checked ~ #controls label:nth-child(1) {
+  background: url('https://image.flaticon.com/icons/svg/130/130884.svg') no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  #slides {
+    padding: 5px;
+  }
+
+  #slides .inner {
+    display: flex;
+    flex-direction: column; /* Align slides vertically on smaller screens */
+    width: 80%; /* Ensure each slide takes full width */
+  }
+
+  #slides .slide {
+    width: 80%; /* Each slide takes 100% width */
+    height: auto; /* Auto height for flexible sizing */
+  }
+
+  .slide-content {
+    padding: 10px;
+    font-size: 10px; /* Reduce font size for smaller screens */
+  }
+
+  #controls {
+    margin-top: 10px; /* Adjust margin for control buttons */
+    height: 40px; /* Reduce the height of control buttons */
+  }
+
+  #controls label {
+    width: 30px; /* Smaller control buttons */
+    height: 30px;
+  }
+}
+
+/* Contact us*/
+
+/* Universal selector class */
+.universal-selector {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HTML class */
+.html-class {
+  height: 100%;
+}
+
+/* Body class */
+.body-class {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+
+/* Main Contact Section */
+/* Contact Section styling */
+.contact-section {
+  height: 100vh; /* Full height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/aaron-burden-0fA3gVTGwjQ-unsplash.jpg'); /* Path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+/* Overlay for darker effect */
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+/* Heading styles */
+.heading {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: white;
+}
+
+/* Description paragraph */
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 400px;
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* General input styling */
+.input-field, .message-field {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Message text area */
+.message-field {
+  height: 120px;
+  resize: none;
+}
+
+/* Submit button */
+.submit-btn {
+  background-color: #d4b17d;
+  color: black;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #b29362;
+}
+
+
+/* --- Responsive adjustments for smaller screens --- */
+
+@media screen and (max-width: 768px) {
+  .overlay {
+    padding: 20px; /* Reduce padding for smaller screens */
+    align-items: center; /* Center elements on smaller screens */
+    justify-content: center;
+  }
+
+  .heading {
+    font-size: 2rem; /* Reduce font size for smaller screens */
+    text-align: center;
+  }
+
+  .description {
+    font-size: 1rem; /* Reduce font size */
+    margin-bottom: 20px;
+    text-align: center; /* Center the description */
+  }
+
+  .contact-form {
+    width: 100%; /* Make the form take full width */
+  }
+
+  .name-fields {
+    flex-direction: column; /* Stack the name fields vertically */
+    gap: 10px; /* Reduce gap between inputs */
+  }
+
+  .contact-fields {
+    flex-direction: column; /* Stack the contact fields vertically */
+    gap: 10px;
+  }
+
+  .input-field, .email-field, .message-field {
+    width: 100%; /* Ensure inputs take full width */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .submit-btn {
+    width: 100%; /* Ensure the button takes full width */
+    padding: 10px;
+    font-size: 1rem;
+  }
+}
+.contact-info {
+  position: absolute; /* Use absolute positioning */
+  top: 50%; /* Center vertically */
+  right: 100px; /* Align to the right */
+  transform: translateY(-40%); /* Adjust to perfectly center */
+  color: #d4b17d; /* Change to the color you prefer */
+  text-align: right; /* Align text to the right */
+  font-size: 2rem;
+}
+
+.contact-info a {
+  color: #d4b17d; /* Link color */
+  text-decoration: underline; /* Underline links */
+  font-size: 2rem;
+}
+
+.contact-info p {
+  margin: 5px 0; /* Space between paragraphs */
+}
+
+@media screen and (max-width: 480px) {
+  .overlay {
+    padding: 10px; /* Further reduce padding for very small screens */
+  }
+
+  .heading {
+    font-size: 1.8rem; /* Smaller font size for small screens */
+  }
+
+  .description {
+    font-size: 0.9rem; /* Further reduce font size */
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+
+  .input-field, .email-field, .message-field {
+    font-size: 0.9rem; /* Slightly smaller text */
+    padding: 10px;
+  }
+
+  .submit-btn {
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller text for button */
+  }
+}
