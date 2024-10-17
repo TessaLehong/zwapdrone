@@ -864,12 +864,12 @@ input:checked + label ~ #slides .slide .hover-text {
     position: static; /* Remove absolute positioning */
     margin-top: 20px; /* Add some margin at the top */
     width: 100%; /* Make it take the full width */
-    text-align: center; /* Center align the text */
-    font-size: 1.2rem; /* Smaller font size */
+    text-align: top; /* Center align the text */
+    font-size: 1rem; /* Smaller font size */
   }
 
   .contact-info a {
-    font-size: 1.2rem; /* Smaller link font size */
+    font-size: 1rem; /* Smaller link font size */
   }
 }
 @media screen and (max-width: 480px) {
