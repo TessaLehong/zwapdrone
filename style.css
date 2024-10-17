@@ -553,7 +553,8 @@ input:checked + label ~ #slides .slide .hover-text {
     background-image: url(pexels-daniel-eliashevsky-30667400-10229033.jpg);
 }
 .card[for="c3"] {
-    background-image: url(afro-american-male-female-colleagues-suits-talking-office.jpg);
+    background-image: url(afro-american-male-female-colleagues-suits-talking-office_compressed.jpg
+);
 }
 .card[for="c4"] {
     background-image: url(Screenshot\ 2024-10-03\ 011831.png);
