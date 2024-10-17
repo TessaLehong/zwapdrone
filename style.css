@@ -858,7 +858,20 @@ input:checked + label ~ #slides .slide .hover-text {
 .contact-info p {
   margin: 5px 0; /* Space between paragraphs */
 }
+/* Responsive adjustments for very small screens */
+@media screen and (max-width: 480px) {
+  .contact-info {
+    position: static; /* Remove absolute positioning */
+    margin-top: 20px; /* Add some margin at the top */
+    width: 100%; /* Make it take the full width */
+    text-align: center; /* Center align the text */
+    font-size: 1.2rem; /* Smaller font size */
+  }
 
+  .contact-info a {
+    font-size: 1.2rem; /* Smaller link font size */
+  }
+}
 @media screen and (max-width: 480px) {
   .overlay {
     padding: 10px; /* Further reduce padding for very small screens */
