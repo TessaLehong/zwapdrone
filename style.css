@@ -651,8 +651,7 @@ input:checked + label ~ #slides .slide .hover-text {
 
 
   /* Mobile-specific styles */
-  @media screen and (max-width: 768px) {
-  .container {
+ container {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
     align-items: center; /* Center cards in the container */
@@ -664,6 +663,8 @@ input:checked + label ~ #slides .slide .hover-text {
     width: 100%; /* Ensure cards take the full width of the container */
     margin: 10px auto; /* Center the cards with some margin */
     max-width: 350px; /* Optional: Limit the card width on smaller screens */
+    height: 70px;
+    max-height: 70px;
   
 }
 
@@ -704,6 +705,7 @@ input:checked + label ~ #slides .slide .hover-text {
     margin-bottom: 20px; /* Space below heading */
   }
 }
+
 
 
   
