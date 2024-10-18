@@ -672,7 +672,7 @@ input:checked + label ~ #slides .slide .hover-text {
       }
     
       .card.expanded {
-        height: 250px; /* Expanded height */
+        height: 300px; /* Expanded height */
       }
     
       .row {
