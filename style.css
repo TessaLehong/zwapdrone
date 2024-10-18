@@ -661,9 +661,9 @@ input:checked + label ~ #slides .slide .hover-text {
 
   .card {
     display: block;
-    width: 100%; /* Ensure cards take the full width of the container */
+    width: 80%; /* Ensure cards take the full width of the container */
     margin: 10px auto; /* Center the cards with some margin */
-    max-width: 350px; /* Optional: Limit the card width on smaller screens */
+    max-width: 300px; /* Optional: Limit the card width on smaller screens */
   
 }
 
@@ -688,7 +688,7 @@ input:checked + label ~ #slides .slide .hover-text {
   }
 
   .calendly-button {
-    width: 100%; /* Full width button */
+    width: 80%; /* Full width button */
     padding: 10px; /* Adjust button padding */
     font-size: 1em; /* Button text size */
     background-color: #007bff; /* Button color */
