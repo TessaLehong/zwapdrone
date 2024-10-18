@@ -453,13 +453,6 @@ nav ul li a:hover {
     justify-content: start ;
     margin-top: 60px;
 }
-@media screen and (max-width: 768px) {
-  .container {
-      flex-wrap: wrap; /* Allow wrapping */
-      justify-content: center; /* Center align items for smaller screens */
-  }
-  
-}
 
 .card {
     width: 80px;
@@ -663,21 +656,26 @@ input:checked + label ~ #slides .slide .hover-text {
     display: flex;
     flex-direction: column; /* Stack cards vertically */
     align-items: center; /* Center cards in the container */
+    display: block; /* Ensure container elements stack */
   }
 
   .card {
-    width: 90%; /* Make each card take most of the screen width */
-    max-width: 350px; /* Optionally limit the maximum width */
-    margin-bottom: 20px; /* Add space between cards */
-  }
+    display: block;
+    width: 100%; /* Ensure cards take the full width of the container */
+    margin: 10px auto; /* Center the cards with some margin */
+    max-width: 350px; /* Optional: Limit the card width on smaller screens */
+  
 }
 
-  .row {
-    display: flex; /* Keep it flex to align items inside each card */
-    flex-direction: column; /* Stack icon and description vertically */
-    align-items: center; /* Center-align contents */
-    text-align: center; /* Center text */
+   .row {
+    flex-direction: column; /* Ensure row content stacks vertically */
+    align-items: center;
   }
+
+  .icon, .description {
+    margin: 10px 0; /* Add space between icon and description */
+  
+}
 
   .description h4 {
     font-size: 1.4em; /* Slightly larger header size */
