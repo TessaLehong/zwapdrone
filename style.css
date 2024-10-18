@@ -656,28 +656,21 @@ input:checked + label ~ #slides .slide .hover-text {
   display: block;
 }
 
-/* Mobile-specific styles */
-@media screen and (max-width: 768px) {
+
   /* Mobile-specific styles */
-@media screen and (max-width: 768px) {
+  @media screen and (max-width: 768px) {
   .container {
     display: flex;
-    flex-direction: column; /* Stack slides vertically */
-    align-items: center; /* Center-align the cards */
-    max-width: 100%; /* Ensure container does not exceed screen width */
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards in the container */
   }
 
   .card {
-    width: 90%; /* Card width set to 90% of the screen */
-    max-width: 350px; /* Optional: limit the card's maximum width */
-    box-sizing: border-box; /* Include padding and borders within width */
-    margin-bottom: 20px; /* Space between cards */
-    padding: 15px; /* Internal padding for the card */
-    background-color: #fff; /* Card background color */
-    border-radius: 8px; /* Rounded corners for cards */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-    display: block; /* Ensures the label acts as a block */
+    width: 90%; /* Make each card take most of the screen width */
+    max-width: 350px; /* Optionally limit the maximum width */
+    margin-bottom: 20px; /* Add space between cards */
   }
+}
 
   .row {
     display: flex; /* Keep it flex to align items inside each card */
