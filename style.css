@@ -658,15 +658,12 @@ input:checked + label ~ #slides .slide .hover-text {
 
 /* Mobile-specific styles */
 @media screen and (max-width: 768px) {
-  #services {
-    padding: 20px; /* Padding around the services section */
-  }
-
+  /* Mobile-specific styles */
+@media screen and (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column; /* Stack slides vertically */
     align-items: center; /* Center-align the cards */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     max-width: 100%; /* Ensure container does not exceed screen width */
   }
 
@@ -689,18 +686,12 @@ input:checked + label ~ #slides .slide .hover-text {
     text-align: center; /* Center text */
   }
 
-  .icon {
-    width: 60px; /* Adjust icon size */
-    height: 60px;
-    margin-bottom: 10px; /* Space below icon */
-  }
-
-  h4 {
+  .description h4 {
     font-size: 1.4em; /* Slightly larger header size */
     margin-bottom: 10px; /* Space below header */
   }
 
-  p {
+  .description p {
     font-size: 1em; /* Adjust paragraph font size */
     margin-bottom: 15px; /* Space below paragraph */
   }
