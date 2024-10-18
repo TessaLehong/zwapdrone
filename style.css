@@ -685,7 +685,7 @@ input:checked + label ~ #slides .slide .hover-text {
       }
     
       .description h4 {
-        font-size: 1.4em;
+        font-size: 1em;
         margin-bottom: 10px;
       }
     
