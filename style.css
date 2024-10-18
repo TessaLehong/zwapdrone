@@ -661,9 +661,9 @@ input:checked + label ~ #slides .slide .hover-text {
 
   .card {
     display: block;
-    width: 100%; /* Ensure cards take the full width of the container */
+    width: 80%; /* Ensure cards take the full width of the container */
     margin: 10px auto; /* Center the cards with some margin */
-    max-width: 350px; /* Optional: Limit the card width on smaller screens */
+    max-width: 300px; /* Optional: Limit the card width on smaller screens */
   
 }
 
@@ -678,7 +678,7 @@ input:checked + label ~ #slides .slide .hover-text {
 }
 
   .description h4 {
-    font-size: 1.4em; /* Slightly larger header size */
+    font-size: 1em; /* Slightly larger header size */
     margin-bottom: 10px; /* Space below header */
   }
 
@@ -688,8 +688,8 @@ input:checked + label ~ #slides .slide .hover-text {
   }
 
   .calendly-button {
-    width: 100%; /* Full width button */
-    padding: 12px; /* Adjust button padding */
+    width: 80%; /* Full width button */
+    padding: 10px; /* Adjust button padding */
     font-size: 1em; /* Button text size */
     background-color: #007bff; /* Button color */
     color: #fff; /* Text color */
@@ -699,7 +699,7 @@ input:checked + label ~ #slides .slide .hover-text {
   }
 
   .services-heading {
-    font-size: 1.8em; /* Adjust heading size */
+    font-size: 1.4em; /* Adjust heading size */
     text-align: center; /* Center align heading */
     margin-bottom: 20px; /* Space below heading */
   }
