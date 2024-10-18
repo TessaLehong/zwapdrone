@@ -656,40 +656,75 @@ input:checked + label ~ #slides .slide .hover-text {
   display: block;
 }
 
-/* Responsive adjustments for smaller screens */
+/* Mobile-specific styles */
 @media screen and (max-width: 768px) {
-  #slides {
-    padding: 5px;
-    width: 100%
-    
+  #services {
+    padding: 20px; /* Padding around the services section */
   }
 
-  #slides .inner {
+  .container {
     display: flex;
-    flex-direction: row; /* Align slides vertically on smaller screens */
-    width: 60%; /* Ensure each slide takes full width */
+    flex-direction: column; /* Stack slides vertically */
+    align-items: center; /* Center-align the cards */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    max-width: 100%; /* Ensure container does not exceed screen width */
   }
 
-  #slides .slide {
-    width: 60%; /* Each slide takes 100% width */
-    height: auto; /* Auto height for flexible sizing */
+  .card {
+    width: 90%; /* Card width set to 90% of the screen */
+    max-width: 350px; /* Optional: limit the card's maximum width */
+    box-sizing: border-box; /* Include padding and borders within width */
+    margin-bottom: 20px; /* Space between cards */
+    padding: 15px; /* Internal padding for the card */
+    background-color: #fff; /* Card background color */
+    border-radius: 8px; /* Rounded corners for cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    display: block; /* Ensures the label acts as a block */
   }
 
-  .slide-content {
-    padding: 10px;
-    font-size: 8px; /* Reduce font size for smaller screens */
+  .row {
+    display: flex; /* Keep it flex to align items inside each card */
+    flex-direction: column; /* Stack icon and description vertically */
+    align-items: center; /* Center-align contents */
+    text-align: center; /* Center text */
   }
 
-  #controls {
-    margin-top: 8px; /* Adjust margin for control buttons */
-    height: 30px; /* Reduce the height of control buttons */
+  .icon {
+    width: 60px; /* Adjust icon size */
+    height: 60px;
+    margin-bottom: 10px; /* Space below icon */
   }
 
-  #controls label {
-    width: 30px; /* Smaller control buttons */
-    height: 30px;
+  h4 {
+    font-size: 1.4em; /* Slightly larger header size */
+    margin-bottom: 10px; /* Space below header */
+  }
+
+  p {
+    font-size: 1em; /* Adjust paragraph font size */
+    margin-bottom: 15px; /* Space below paragraph */
+  }
+
+  .calendly-button {
+    width: 100%; /* Full width button */
+    padding: 12px; /* Adjust button padding */
+    font-size: 1em; /* Button text size */
+    background-color: #007bff; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer on hover */
+  }
+
+  .services-heading {
+    font-size: 1.8em; /* Adjust heading size */
+    text-align: center; /* Center align heading */
+    margin-bottom: 20px; /* Space below heading */
   }
 }
+
+
+  
 
 /* Contact us*/
 
