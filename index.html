@@ -136,6 +136,22 @@
             </label>
         </div>
     </div>
+
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+          card.addEventListener('click', function() {
+            this.classList.toggle('expanded'); // Toggle the 'expanded' class on click
+      
+            // Toggle the visibility of the button inside the clicked card
+            const button = this.querySelector('.calendly-button');
+            if (this.classList.contains('expanded')) {
+              button.style.display = 'block';  // Show the button when expanded
+            } else {
+              button.style.display = 'none';   // Hide the button when collapsed
+            }
+          });
+        });
+      </script>
 </section>
 
 
