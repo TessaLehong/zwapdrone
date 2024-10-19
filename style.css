@@ -87,6 +87,10 @@ nav ul li a:hover {
     text-align: center;
   }
 
+  /* Change font color of the links */
+  nav ul li a {
+    color: #ff0000; /* Change this to the color you prefer */
+  }
   /* Show the navigation when active */
   nav ul.active {
     display: flex;
@@ -224,7 +228,7 @@ nav ul li a:hover {
   align-items: center;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 2s ease-out 5s forwards; /* Slow fade-in and upwards animation */
+  animation: fadeInUp 1s ease-out 1s forwards; /* Slow fade-in and upwards animation */
 }
 
 /* Content Styles */
@@ -259,7 +263,7 @@ nav ul li a:hover {
   padding: 20px;
   opacity: 0;
   transform: translateY(30px);
-  animation: fadeInUp 2.5s ease-out 1.5s forwards;
+  animation: fadeInUp 1.5s ease-out 1.5s forwards;
 }
 
 .image-content img {
