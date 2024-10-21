@@ -81,6 +81,7 @@
         <div class="container">
             <!-- Service Card 1 -->
             <div class="service-item">
+                <input type="radio" name="slide" id="c1">
                 <label for="c1" class="card">
                     <div class="row">
                         <div class="icon"></div>
@@ -96,6 +97,7 @@
 
             <!-- Service Card 2 -->
             <div class="service-item">
+                <input type="radio" name="slide" id="c2">
                 <label for="c2" class="card">
                     <div class="row">
                         <div class="icon"></div>
@@ -111,6 +113,7 @@
 
             <!-- Service Card 3 -->
             <div class="service-item">
+                <input type="radio" name="slide" id="c3">
                 <label for="c3" class="card">
                     <div class="row">
                         <div class="icon"></div>
@@ -126,6 +129,7 @@
 
             <!-- Service Card 4 -->
             <div class="service-item">
+                <input type="radio" name="slide" id="c4">
                 <label for="c4" class="card">
                     <div class="row">
                         <div class="icon"></div>
@@ -140,8 +144,25 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+          card.addEventListener('click', function() {
+            this.classList.toggle('expanded'); // Toggle the 'expanded' class on click
+      
+            // Toggle the visibility of the button inside the clicked card
+            const button = this.querySelector('.calendly-button');
+            if (this.classList.contains('expanded')) {
+              button.style.display = 'block';  // Show the button when expanded
+            } else {
+              button.style.display = 'none';   // Hide the button when collapsed
+            }
+          });
+        });
+      </script>
+      
+      
+      
 </section>
-
 
     
 
