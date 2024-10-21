@@ -80,89 +80,66 @@
         <h1 class="services-heading">Services</h1> 
         <div class="container">
             <!-- Service Card 1 -->
-            <input type="radio" name="slide" id="c1">
-            <label for="c1" class="card">
-                <div class="row">
-                    <div class="icon"></div>
-                    <div class="description">
-                        <h4>Rent a Drone</h4>
-                        <p>You can rent drones from us, fully insured and compliant with all regulations.</p>
-                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Rental</button>
+            <div class="service-item">
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon"></div>
+                        <div class="description">
+                            <h4>Rent a Drone</h4>
+                            <p>You can rent drones from us, fully insured and compliant with all regulations.</p>
+                            <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Rental</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hover-text">Rent a drone</div> <!-- Hover text for slide 1 -->
-            </label>
+                    <div class="hover-text">Rent a drone</div> <!-- Hover text for slide 1 -->
+                </label>
+            </div>
 
             <!-- Service Card 2 -->
-            <input type="radio" name="slide" id="c2">
-            <label for="c2" class="card">
-                <div class="row">
-                    <div class="icon"></div>
-                    <div class="description">
-                        <h4>Photography</h4>
-                        <p>This process includes briefing the client, visiting the location, capturing photos, enhancing them for the best quality, and delivering both digital and hard copies to the client.</p>
-                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Photography</button>
+            <div class="service-item">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon"></div>
+                        <div class="description">
+                            <h4>Photography</h4>
+                            <p>This process includes briefing the client, visiting the location, capturing photos, enhancing them for the best quality, and delivering both digital and hard copies to the client.</p>
+                            <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Photography</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hover-text">Drone Photography</div> <!-- Hover text for slide 2 -->
-            </label>
+                    <div class="hover-text">Drone Photography</div> <!-- Hover text for slide 2 -->
+                </label>
+            </div>
 
             <!-- Service Card 3 -->
-            <input type="radio" name="slide" id="c3">
-            <label for="c3" class="card">
-                <div class="row">
-                    <div class="icon"></div>
-                    <div class="description">
-                        <h4>Consulting</h4>
-                        <p>We advise you on the right drone and software to achieve your desired outcome. Our consultants have expert knowledge of the industry and stay updated on the latest advancements in drone technology.</p>
-                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Consulting</button>
+            <div class="service-item">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon"></div>
+                        <div class="description">
+                            <h4>Consulting</h4>
+                            <p>We advise you on the right drone and software to achieve your desired outcome. Our consultants have expert knowledge of the industry and stay updated on the latest advancements in drone technology.</p>
+                            <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule Consulting</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hover-text">Drone Consulting</div> <!-- Hover text for slide 3 -->
-            </label>
+                    <div class="hover-text">Drone Consulting</div> <!-- Hover text for slide 3 -->
+                </label>
+            </div>
 
             <!-- Service Card 4 -->
-            <input type="radio" name="slide" id="c4">
-            <label for="c4" class="card">
-                <div class="row">
-                    <div class="icon"></div>
-                    <div class="description">
-                        <h4>Pilot License</h4>
-                        <p>We offer beginner drone flying lessons and assist with navigating local legislation and licensing requirements.</p>
-                        <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule License Session</button>
+            <div class="service-item">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon"></div>
+                        <div class="description">
+                            <h4>Pilot License</h4>
+                            <p>We offer beginner drone flying lessons and assist with navigating local legislation and licensing requirements.</p>
+                            <button class="calendly-button" onclick="Calendly.showPopupWidget('https://calendly.com/tessalehong/when-do-you-want-to-book-1'); return false;">Schedule License Session</button>
+                        </div>
                     </div>
-                </div>
-                <div class="hover-text">Pilot License</div> <!-- Hover text for slide 4 -->
-            </label>
+                    <div class="hover-text">Pilot License</div> <!-- Hover text for slide 4 -->
+                </label>
+            </div>
         </div>
     </div>
-
-    <script>
-  document.querySelectorAll('.card').forEach(card => {
-    card.addEventListener('click', function() {
-      // First, collapse all other cards
-      document.querySelectorAll('.card').forEach(otherCard => {
-        if (otherCard !== this) {
-          otherCard.classList.remove('expanded');
-          const otherButton = otherCard.querySelector('.calendly-button');
-          if (otherButton) otherButton.style.display = 'none'; // Hide button in other cards
-        }
-      });
-
-      // Toggle the current card's expanded state
-      this.classList.toggle('expanded');
-
-      // Toggle the button visibility inside the clicked card
-      const button = this.querySelector('.calendly-button');
-      if (this.classList.contains('expanded')) {
-        button.style.display = 'block';  // Show the button when expanded
-      } else {
-        button.style.display = 'none';   // Hide the button when collapsed
-      }
-    });
-  });
-</script>
-
 </section>
 
 
